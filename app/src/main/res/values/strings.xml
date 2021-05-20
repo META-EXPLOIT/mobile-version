@@ -3,7 +3,7 @@
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="sing_up_1">É novo por aqui? </string>
+    <string name="sing_up_1">É novo por aqui?<span> </span></string>
     <string name="sing_up_2"><u>Cadastre-se</u> </string>
     <string name="sing_up_3">para começar!</string>
 </resources>
