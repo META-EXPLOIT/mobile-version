@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="88dp"
+    android:layout_height="wrap_content"
+    android:paddingEnd="11dp"
+    android:paddingStart="0dp"
+    android:background="@drawable/bc_item_menu"
+    android:layout_marginHorizontal="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/item_main_menu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="42dp"-->
+<!--        app:icon="@drawable/ic_calendar"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:iconPadding="8dp"-->
+<!--        android:layout_marginHorizontal="4dp"-->
+<!--        android:backgroundTint="@color/color_state_list_menu_item"-->
+<!--        app:iconTint="#0A46BD"-->
+<!--        android:textColor=" #0A46BD"-->
+
+<!--        tools:text="Diária"/>-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_menu_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/ic_calendar"
+
+        android:layout_marginVertical="7dp"
+        android:layout_marginStart="13dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0A46BD"
+        android:textSize="12sp"
+        android:textStyle="bold"
+
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="9dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_menu_image"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Diária"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

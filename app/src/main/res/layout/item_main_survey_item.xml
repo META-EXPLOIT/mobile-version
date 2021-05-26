@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="170dp"
+    android:layout_height="wrap_content"
+    android:minHeight="140dp"
+    android:background="@drawable/bc_item_survey"
+    android:layout_marginHorizontal="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_main_recyclerview_surveys_items_image_bc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_survey_daily" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_main_recyclerview_surveys_items_text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#353535"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_main_recyclerview_surveys_items_image_bc"
+
+        tools:text="Disponível" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_main_recyclerview_surveys_items_text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#353535"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_main_recyclerview_surveys_items_text_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        tools:text="03/05" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_main_recyclerview_surveys_items_text_title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#353535"
+
+        android:layout_marginHorizontal="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fg_main_recyclerview_surveys_items_text_date"
+
+        tools:text="Diária" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

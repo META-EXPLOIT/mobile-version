@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".singup.SingUpPart1Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_sing_up_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/fg_sing_up_title2"
+            android:textColor="#1C1C1C"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_sing_up_description3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20.8dp"
+            android:paddingHorizontal="3.2dp"
+
+            android:layout_marginTop="8dp"
+
+            android:textColor="#434343"
+            android:lineHeight="24dp"
+            android:text="@string/fg_sing_up_description1"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_sing_up4_label_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="#212529"
+            android:layout_marginTop="20dp"
+
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="@id/fg_sing_up_description3"
+            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_description3" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fg_sing_up1_edt_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+
+            android:shadowColor="#400F161E"
+            android:elevation="16dp"
+
+            app:boxStrokeColor="#1362FF"
+            app:boxStrokeWidth="1dp"
+
+            app:hintEnabled="false"
+
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_description3"
+            app:layout_constraintStart_toStartOf="@id/fg_sing_up_description3"
+            app:layout_constraintTop_toBottomOf="@id/fg_sing_up4_label_password">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textCursorDrawable="?attr/boxStrokeColor"
+                android:textColorHint="#2B2B2B"
+                android:paddingHorizontal="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
