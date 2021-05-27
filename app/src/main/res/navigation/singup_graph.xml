@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singUpPart1Fragment"
-        android:name="br.com.metaexploit.diversight.singup.SingUpPart1Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart1Fragment"
         android:label="fragment_sing_up_part1"
         tools:layout="@layout/fragment_sing_up_part1" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpPart2Fragment"
-        android:name="br.com.metaexploit.diversight.singup.SingUpPart2Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart2Fragment"
         android:label="fragment_sing_up_part2"
         tools:layout="@layout/fragment_sing_up_part2" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/singUpPart3Fragment"
-        android:name="br.com.metaexploit.diversight.singup.SingUpPart3Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart3Fragment"
         android:label="fragment_sing_up_part3">
         <action
             android:id="@+id/action_singUpPart3Fragment_to_singUpPart4Fragment"
@@ -33,6 +33,6 @@
     </fragment>
     <fragment
         android:id="@+id/singUpPart4Fragment"
-        android:name="br.com.metaexploit.diversight.singup.SingUpPart4Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart4Fragment"
         android:label="fragment_sing_up_part4" />
 </navigation>

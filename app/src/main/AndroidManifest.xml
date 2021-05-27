@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCamp">
-        <activity android:name=".HomeActivity">
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

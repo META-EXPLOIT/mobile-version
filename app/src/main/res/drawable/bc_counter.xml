@@ -2,5 +2,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <solid android:color="@color/blue_navBar_main"/>
-    <corners android:radius="4pt"/>
+    <corners android:radius="2pt"/>
 </shape>

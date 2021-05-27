@@ -17,4 +17,5 @@
     <color name="grey_300">#949494</color>
     <color name="blue_navBar_main">#1362FF</color>
     <color name="text_menu_item_on_focus">#F8F8F8</color>
+    <color name="loading">#4D1F2F87</color>
 </resources>

@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/emotionalFragment">
 
     <fragment
         android:id="@+id/updateUserFragment"
-        android:name="br.com.metaexploit.diversight.UpdateUserFragment"
+        android:name="br.com.metaexploit.diversight.ui.UpdateUserFragment"
         android:label="fragment_update_user"
         tools:layout="@layout/fragment_update_user" />
     <fragment
         android:id="@+id/surveyFragment"
-        android:name="br.com.metaexploit.diversight.SurveyFragment"
+        android:name="br.com.metaexploit.diversight.ui.SurveyFragment"
         android:label="fragment_survey"
         tools:layout="@layout/fragment_survey">
         <argument
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="br.com.metaexploit.diversight.HomeFragment"
+        android:name="br.com.metaexploit.diversight.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -33,10 +33,13 @@
         <action
             android:id="@+id/action_homeFragment_to_userFragment"
             app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emotionalFragment"
+            app:destination="@id/emotionalFragment" />
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="br.com.metaexploit.diversight.UserFragment"
+        android:name="br.com.metaexploit.diversight.data.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user">
         <action
@@ -48,7 +51,17 @@
     </fragment>
     <fragment
         android:id="@+id/updateEnterpriseFragment"
-        android:name="br.com.metaexploit.diversight.UpdateEnterpriseFragment"
+        android:name="br.com.metaexploit.diversight.ui.UpdateEnterpriseFragment"
         android:label="fragment_update_enterprise"
         tools:layout="@layout/fragment_update_enterprise" />
+    <fragment
+        android:id="@+id/emotionalFragment"
+        android:name="br.com.metaexploit.diversight.ui.EmotionalFragment"
+        android:label="fragment_emotional"
+        tools:layout="@layout/fragment_emotional" >
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>
