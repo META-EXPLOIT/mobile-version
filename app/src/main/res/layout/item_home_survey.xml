@@ -7,7 +7,7 @@
     android:id="@+id/fg_main_constraint_layout_daily">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_main_recyclerview_surveys_items_title"
+        android:id="@+id/fg_home_recyclerview_surveys_items_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Pesquisas diárias"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fg_main_recyclerview_surveys_items"
+        android:id="@+id/fg_home_recyclerview_surveys_items"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -30,11 +30,12 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
         android:layout_marginTop="8dp"
-        android:layout_marginStart="20dp"
+        android:paddingHorizontal="20dp"
+        android:clipToPadding="false"
 
-        tools:listitem="@layout/item_main_survey_item"
+        tools:listitem="@layout/item_home_survey_item"
 
-        app:layout_constraintTop_toBottomOf="@id/fg_main_recyclerview_surveys_items_title"
+        app:layout_constraintTop_toBottomOf="@id/fg_home_recyclerview_surveys_items_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".singup.SingUpPart1Fragment">
+    tools:context=".singup.SingUpPart4Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_title"
+            android:id="@+id/fg_sing_up_1_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_description3"
+            android:id="@+id/fg_sing_up_1_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20.8dp"
@@ -35,14 +35,14 @@
 
             android:textColor="#434343"
             android:lineHeight="24dp"
-            android:text="Informar sua senha para acessar a plataforma."
+            android:text="Escolha qual senha você utilizará para acessar a nossa plataforma."
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_title" />
+            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_title" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up4_label_password"
+            android:id="@+id/fg_update_user_label_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -50,8 +50,8 @@
             android:layout_marginTop="20dp"
 
             android:text="Senha"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_description3"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_description3" />
+            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
+            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_description" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fg_sing_up4_edt_password"
@@ -69,9 +69,9 @@
             app:hintEnabled="false"
 
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_description3"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_description3"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up4_label_password"
+            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_description"
+            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
+            app:layout_constraintTop_toBottomOf="@id/fg_update_user_label_name"
 
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="#1362FF">
@@ -94,7 +94,7 @@
             android:textColor="#212529"
             android:layout_marginTop="20dp"
 
-            android:text="Senha"
+            android:text="Confirmar senha"
             app:layout_constraintStart_toStartOf="@id/fg_sing_up4_edt_password"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up4_edt_password" />
 
@@ -114,8 +114,8 @@
             app:hintEnabled="false"
 
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_description3"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_description3"
+            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_description"
+            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up4_label_password_confirm"
 
             app:passwordToggleEnabled="true"

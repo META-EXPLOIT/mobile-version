@@ -10,22 +10,6 @@
     android:layout_marginHorizontal="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--    <com.google.android.material.button.MaterialButton-->
-<!--        android:id="@+id/item_main_menu"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="42dp"-->
-<!--        app:icon="@drawable/ic_calendar"-->
-<!--        android:textAllCaps="false"-->
-<!--        android:textSize="12sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:iconPadding="8dp"-->
-<!--        android:layout_marginHorizontal="4dp"-->
-<!--        android:backgroundTint="@color/color_state_list_menu_item"-->
-<!--        app:iconTint="#0A46BD"-->
-<!--        android:textColor=" #0A46BD"-->
-
-<!--        tools:text="Diária"/>-->
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/item_menu_image"
         android:layout_width="wrap_content"

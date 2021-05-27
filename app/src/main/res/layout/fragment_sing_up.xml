@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ProgressBar
-            android:id="@+id/progressBarSingUp"
+            android:id="@+id/fg_singup_progress_bar_sing_up"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="312dp"
             android:layout_height="13dp"
@@ -32,13 +32,12 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/singup_graph"
 
-            app:layout_constraintTop_toBottomOf="@id/progressBarSingUp"
+            app:layout_constraintTop_toBottomOf="@id/fg_singup_progress_bar_sing_up"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-             />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/sing_up_btn_next2"
+            android:id="@+id/fg_singup_user_btn_next"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 

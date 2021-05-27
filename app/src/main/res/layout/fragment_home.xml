@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_survey_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="Pesquisas"
+        android:textColor="#F8F8F8"
+
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="24dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_survey_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="Disponíveis"
+        android:textColor="#F8F8F8"
+
+        android:layout_marginTop="67dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/fg_survey_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:background="@drawable/ic_smile"
+
+        android:layout_marginEnd="24dp"
+
+        app:layout_constraintTop_toTopOf="@id/fg_survey_title"
+        app:layout_constraintBottom_toBottomOf="@id/fg_survey_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_update_user_background_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bc_home"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fg_home_recyclerview_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:foregroundGravity="center"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        tools:listitem="@layout/item_home_menu"
+
+        android:layout_marginTop="115dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fg_home_recyclerview_surveys"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        android:layout_marginTop="20dp"
+        android:paddingBottom="200dp"
+        android:clipToPadding="false"
+
+        app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        tools:listitem="@layout/item_home_survey" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_home_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:src="@drawable/ic_main"
+        android:visibility="gone"
+
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="66dp"
+
+        app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_home_label_nosearch"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma pesquisa disponível no momento!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#353535"
+        android:gravity="center"
+
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="78dp"
+
+        app:layout_constraintTop_toBottomOf="@id/fg_home_icon"
+        app:layout_constraintStart_toStartOf="@id/fg_home_icon"
+        app:layout_constraintEnd_toEndOf="@id/fg_home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

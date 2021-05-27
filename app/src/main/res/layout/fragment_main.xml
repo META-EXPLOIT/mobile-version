@@ -6,109 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:text="Pesquisas"
-        android:textColor="#F8F8F8"
-
-        android:layout_marginTop="53dp"
-        android:layout_marginStart="24dp"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        android:background="@drawable/ic_smile"
-
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="24dp"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_main_background_top"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bc_main"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fg_main_recyclerview_menu"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fg_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-        tools:listitem="@layout/item_main_menu"
-
-        android:layout_marginTop="115dp"
-
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/home_graph"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fg_main_recyclerview_surveys"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-        android:layout_marginTop="20dp"
-
-        app:layout_constraintTop_toBottomOf="@id/fg_main_background_top"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-
-        tools:listitem="@layout/item_main_survey" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_main_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:src="@drawable/ic_main"
-        android:visibility="gone"
-
-        android:layout_marginTop="70dp"
-        android:layout_marginHorizontal="66dp"
-
-        app:layout_constraintTop_toBottomOf="@id/fg_main_background_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fg_main_label_nosearch"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_main_label_nosearch"
-        android:layout_width="0dp"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:text="Nenhuma pesquisa disponível no momento!"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#353535"
-        android:gravity="center"
-
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="78dp"
-
-        app:layout_constraintTop_toBottomOf="@id/fg_main_icon"
-        app:layout_constraintStart_toStartOf="@id/fg_main_icon"
-        app:layout_constraintEnd_toEndOf="@id/fg_main_icon"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

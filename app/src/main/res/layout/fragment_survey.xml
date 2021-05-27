@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SurveyFragment">
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_survey_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="38dp"
+            android:elevation="2dp"
+            android:text="Pesquisa"
+            android:textColor="#F8F8F8"
+
+            android:textSize="28sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_survey_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:elevation="2dp"
+            android:text="NPS"
+            android:textColor="#F8F8F8"
+            android:textSize="28sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/fg_survey_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/ic_smile"
+
+            android:elevation="2dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/fg_survey_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fg_survey_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_update_user_background_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bc_home"
+            android:elevation="1dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_home_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="70dp"
+
+            android:src="@drawable/ic_main"
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_home_label_nosearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="78dp"
+            android:gravity="center"
+            android:text="Nenhuma pesquisa disponível no momento!"
+            android:textColor="#353535"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/fg_home_icon"
+            app:layout_constraintStart_toStartOf="@id/fg_home_icon"
+            app:layout_constraintTop_toBottomOf="@id/fg_home_icon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fg_survey_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+
+            android:layout_marginTop="120dp"
+            android:paddingTop="30dp"
+            android:clipToPadding="false"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fg_survey_button"
+            tools:listitem="@layout/item_question"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fg_survey_button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="100dp"
+
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+
+            android:backgroundTint="@color/blue_navBar_main"
+            android:text="Enviar"
+            android:textAllCaps="false"
+
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_send"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_recyclerview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

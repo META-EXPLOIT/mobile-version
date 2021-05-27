@@ -3,28 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="br.com.metaexploit.diversight.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_singUpFragment"
-            app:destination="@id/singUpFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+        android:id="@+id/updateUserFragment"
+        android:name="br.com.metaexploit.diversight.UpdateUserFragment"
+        android:label="fragment_update_user"
+        tools:layout="@layout/fragment_update_user" />
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="br.com.metaexploit.diversight.SurveyFragment"
+        android:label="fragment_survey"
+        tools:layout="@layout/fragment_survey">
+        <argument
+            android:name="enunciated"
+            app:argType="string" />
+        <argument
+            android:name="questionOptions"
+            app:argType="string[]" />
     </fragment>
     <fragment
-        android:id="@+id/singUpFragment"
-        android:name="br.com.metaexploit.diversight.SingUpFragment"
-        android:label="fragment_sing_up"
-        tools:layout="@layout/fragment_sing_up" />
+        android:id="@+id/homeFragment"
+        android:name="br.com.metaexploit.diversight.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_surveyFragment"
+            app:destination="@id/surveyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="br.com.metaexploit.diversight.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        android:id="@+id/userFragment"
+        android:name="br.com.metaexploit.diversight.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_updateEnterpriseFragment"
+            app:destination="@id/updateEnterpriseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEnterpriseFragment"
+        android:name="br.com.metaexploit.diversight.UpdateEnterpriseFragment"
+        android:label="fragment_update_enterprise"
+        tools:layout="@layout/fragment_update_enterprise" />
 </navigation>
