@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
-    app:startDestination="@id/emotionalFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/updateUserFragment"
@@ -14,14 +14,7 @@
         android:id="@+id/surveyFragment"
         android:name="br.com.metaexploit.diversight.ui.SurveyFragment"
         android:label="fragment_survey"
-        tools:layout="@layout/fragment_survey">
-        <argument
-            android:name="enunciated"
-            app:argType="string" />
-        <argument
-            android:name="questionOptions"
-            app:argType="string[]" />
-    </fragment>
+        tools:layout="@layout/fragment_survey"/>
     <fragment
         android:id="@+id/homeFragment"
         android:name="br.com.metaexploit.diversight.ui.HomeFragment"
@@ -39,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="br.com.metaexploit.diversight.data.UserFragment"
+        android:name="br.com.metaexploit.diversight.ui.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user">
         <action
@@ -58,10 +51,10 @@
         android:id="@+id/emotionalFragment"
         android:name="br.com.metaexploit.diversight.ui.EmotionalFragment"
         android:label="fragment_emotional"
-        tools:layout="@layout/fragment_emotional" >
+        tools:layout="@layout/fragment_emotional">
         <argument
             android:name="type"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

@@ -10,19 +10,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_sing_up_button_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_back_sing_up"
+            android:visibility="gone"
+
+            android:layout_marginStart="24dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fg_singup_progress_bar_sing_up"
+            app:layout_constraintBottom_toBottomOf="@id/fg_singup_progress_bar_sing_up"
+            app:layout_constraintEnd_toStartOf="@id/fg_singup_progress_bar_sing_up"/>
+
         <ProgressBar
             android:id="@+id/fg_singup_progress_bar_sing_up"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="312dp"
+            android:layout_width="0dp"
             android:layout_height="13dp"
 
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="24dp"
 
             android:progress="15"
             android:progressTint="#1362FF"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fg_sing_up_button_back"
+            />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fg_singup"
@@ -60,5 +77,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </ScrollView>

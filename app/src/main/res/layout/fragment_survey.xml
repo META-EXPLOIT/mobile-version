@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.SurveyFragment">
 
+        <!--Background top-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_survey_background_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bc_home"
+            android:elevation="1dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Title-->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_survey_title"
             android:layout_width="wrap_content"
@@ -21,7 +33,7 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!--Subtitle-->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_survey_subtitle"
             android:layout_width="wrap_content"
@@ -36,7 +48,7 @@
 
             app:layout_constraintStart_toStartOf="@id/fg_survey_title"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!--Smile icon-->
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,58 +60,13 @@
             app:layout_constraintBottom_toBottomOf="@id/fg_survey_subtitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/fg_survey_title" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_update_user_background_top"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bc_home"
-            android:elevation="1dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_home_icon"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-
-            android:layout_marginHorizontal="66dp"
-            android:layout_marginTop="70dp"
-
-            android:src="@drawable/ic_main"
-            android:visibility="gone"
-
-            app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_home_label_nosearch"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="78dp"
-            android:gravity="center"
-            android:text="Nenhuma pesquisa disponível no momento!"
-            android:textColor="#353535"
-            android:textSize="16sp"
-
-            android:textStyle="bold"
-            android:visibility="gone"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/fg_home_icon"
-            app:layout_constraintStart_toStartOf="@id/fg_home_icon"
-            app:layout_constraintTop_toBottomOf="@id/fg_home_icon" />
-
+        <!--Question list-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fg_survey_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="24dp"
+            android:visibility="gone"
 
             android:layout_marginTop="120dp"
             android:paddingTop="30dp"
@@ -112,6 +79,41 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/fg_survey_button"
             tools:listitem="@layout/item_question"/>
+        <!--Complete image-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fg_survey_icon_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_emotional"
+            android:visibility="visible"
+
+            android:layout_marginTop="70dp"
+            android:layout_marginHorizontal="66dp"
+
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_background_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fg_survey_label_complete"/>
+        <!--Complete text-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fg_survey_label_complete"
+            android:layout_width="0dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:text="Sua pesquisa foi enviada com sucesso"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#353535"
+            android:gravity="center"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="78dp"
+
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_icon_complete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/fg_survey_button"
@@ -137,6 +139,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_recyclerview" />
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_label_complete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

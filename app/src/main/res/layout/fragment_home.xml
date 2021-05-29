@@ -6,8 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeFragment">
 
+    <!--Background top-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_home_background_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bc_home"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!--Title-->
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_survey_title"
+        android:id="@+id/fg_home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="1dp"
@@ -21,9 +32,9 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
-
+    <!--Subtitle-->
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_survey_subtitle"
+        android:id="@+id/fg_home_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="1dp"
@@ -35,8 +46,8 @@
         android:layout_marginTop="67dp"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/fg_survey_title" />
-
+        app:layout_constraintStart_toStartOf="@id/fg_home_title" />
+    <!--Smile icon-->
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,20 +56,10 @@
 
         android:layout_marginEnd="24dp"
 
-        app:layout_constraintTop_toTopOf="@id/fg_survey_title"
-        app:layout_constraintBottom_toBottomOf="@id/fg_survey_subtitle"
+        app:layout_constraintTop_toTopOf="@id/fg_home_title"
+        app:layout_constraintBottom_toBottomOf="@id/fg_home_subtitle"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_update_user_background_top"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bc_home"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+    <!--Menu filter-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fg_home_recyclerview_menu"
         android:layout_width="wrap_content"
@@ -75,11 +76,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
+    <!--Survey list-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fg_home_recyclerview_surveys"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="visible"
+        android:elevation="3dp"
 
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -88,13 +91,13 @@
         android:paddingBottom="200dp"
         android:clipToPadding="false"
 
-        app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top"
+        app:layout_constraintTop_toBottomOf="@id/fg_home_background_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
 
         tools:listitem="@layout/item_home_survey" />
-
+    <!--No survey image-->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/fg_home_icon"
         android:layout_width="0dp"
@@ -106,11 +109,11 @@
         android:layout_marginTop="70dp"
         android:layout_marginHorizontal="66dp"
 
-        app:layout_constraintTop_toBottomOf="@id/fg_update_user_background_top"
+        app:layout_constraintTop_toBottomOf="@id/fg_home_background_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"/>
-
+    <!--No survey text-->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/fg_home_label_nosearch"
         android:layout_width="0dp"
