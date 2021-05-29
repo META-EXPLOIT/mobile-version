@@ -126,7 +126,7 @@
             android:layout_marginBottom="40dp"
             android:layout_marginTop="30dp"
 
-            android:backgroundTint="@color/blue_navBar_main"
+            android:backgroundTint="@color/blue_0"
             android:text="Enviar"
             android:textAllCaps="false"
 

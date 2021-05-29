@@ -15,7 +15,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/ic_back_sing_up"
-            android:visibility="gone"
+            android:visibility="visible"
 
             android:layout_marginStart="24dp"
 

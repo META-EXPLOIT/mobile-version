@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_main"
-        app:itemIconTint="@color/blue_navBar_main"
-        app:itemTextColor="@color/blue_navBar_main"
+        app:itemIconTint="@color/blue_0"
+        app:itemTextColor="@color/blue_0"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

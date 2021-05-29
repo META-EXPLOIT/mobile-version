@@ -13,7 +13,7 @@
 
             android:textSize="14sp"
             android:textColor="#2B2B2B"
-            android:buttonTint="@color/blue_navBar_main"
+            android:buttonTint="@color/blue_0"
 
             android:layout_marginVertical="4dp"
 

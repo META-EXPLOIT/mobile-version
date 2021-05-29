@@ -316,7 +316,7 @@
                android:id="@+id/fg_update_user_pcd_opt_1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
 
                android:text="Visual" />
@@ -325,7 +325,7 @@
                android:id="@+id/fg_update_user_pcd_opt_2"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
                android:text="Física" />
 
@@ -333,7 +333,7 @@
                android:id="@+id/fg_update_user_pcd_opt_3"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
                android:text="Auditiva" />
 
@@ -341,7 +341,7 @@
                android:id="@+id/fg_update_user_pcd_opt_4"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
                android:text="Intelectual" />
 
@@ -349,7 +349,7 @@
                android:id="@+id/fg_update_user_pcd_opt_5"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
                android:text="Psicossocial" />
 
@@ -357,7 +357,7 @@
                android:id="@+id/fg_update_user_pcd_opt_6"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:buttonTint="@color/blue_navBar_main"
+               android:buttonTint="@color/blue_0"
                android:textSize="14sp"
                android:text="Reabilitado / Readaptado" />
        </LinearLayout>

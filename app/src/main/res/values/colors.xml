@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bc_input">#F5F5F5</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="stroke_input">#f5f5f5</color>
     <color name="bc_button_login">#FDBB10</color>
-    <color name="orange_400">#944300</color>
     <color name="transparent_white">#80FFFFFF</color>
     <color name="transparent_black">#80000000</color>
-    <color name="grey_300">#949494</color>
-    <color name="blue_navBar_main">#1362FF</color>
     <color name="text_menu_item_on_focus">#F8F8F8</color>
-    <color name="loading">#4D1F2F87</color>
+    <color name="loading">#80ADC9FF</color>
+
+    <color name="blue_minus_2">#0C2D6E</color>
+    <color name="blue_minus_1">#0A46BD</color>
+    <color name="blue_0">#1362FF</color>
+    <color name="blue_plus_1">#6196FF</color>
+    <color name="blue_plus_2">#ADC9FF</color>
+    <color name="blue_plus_3">#DAE6FF</color>
+
+    <color name="yellow_minus_2">#976811</color>
+    <color name="yellow_minus_1">#E99A0C</color>
+    <color name="yellow_0">#FFBC42</color>
+    <color name="yellow_plus_1">#FFD78F</color>
+    <color name="yellow_plus_2">#FFF2DB</color>
+
+    <color name="red_minus_2">#531313</color>
+    <color name="red_minus_1">#9A1818</color>
+    <color name="red_0">#E91717</color>
+    <color name="red_plus_1">#F05C5C</color>
+    <color name="red_plus_2">#F6A2A2</color>
+
+    <color name="green_minus_2">#0C3206</color>
+    <color name="green_minus_1">#177E07</color>
+    <color name="green_0">#1DD200</color>
+    <color name="green_plus_1">#3EFF1F</color>
+    <color name="green_plus_2">#80FF6B</color>
+
+    <color name="black_minus_1">#1C1C1C</color>
+    <color name="black_0">#2B2B2B</color>
+    <color name="black_plus_1">#353535</color>
+    <color name="black_plus_2">#B4B4B4</color>
+    <color name="black_plus_3">#D4D4D4</color>
+    <color name="black_text">#434343</color>
+
+    <color name="white_minus_1">#E4E4E4</color>
+    <color name="white_0">#F6F6F6</color>
+    <color name="white_plus_1">#F8F8F8</color>
+    <color name="white_plus_2">#F7F8FC</color>
+
 </resources>

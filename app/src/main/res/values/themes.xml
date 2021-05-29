@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.AppCamp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue_0</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/transparent_black</item>
         <!-- Customize your theme here. -->
@@ -18,7 +19,7 @@
 
     <style name="Theme.AppCamp.BottomNavigationView">
         <item name="colorPrimary">@color/white</item>
-        <item name="colorOnPrimary">@color/blue_navBar_main</item>
+        <item name="colorOnPrimary">@color/blue_0</item>
     </style>
 </resources>
 

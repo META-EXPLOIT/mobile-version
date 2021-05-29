@@ -21,7 +21,11 @@
         android:id="@+id/singUpFragment"
         android:name="br.com.metaexploit.diversight.ui.SingUpFragment"
         android:label="fragment_sing_up"
-        tools:layout="@layout/fragment_sing_up" />
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_singUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="br.com.metaexploit.diversight.ui.MainFragment"

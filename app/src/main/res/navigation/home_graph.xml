@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/emotionalFragment">
 
     <fragment
         android:id="@+id/updateUserFragment"
@@ -14,7 +14,7 @@
         android:id="@+id/surveyFragment"
         android:name="br.com.metaexploit.diversight.ui.SurveyFragment"
         android:label="fragment_survey"
-        tools:layout="@layout/fragment_survey"/>
+        tools:layout="@layout/fragment_survey" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="br.com.metaexploit.diversight.ui.HomeFragment"
