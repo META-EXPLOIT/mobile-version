@@ -78,7 +78,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fg_user_background_top" />
 
-
     <View
         android:layout_width="0dp"
         android:layout_height="1px"
@@ -115,12 +114,13 @@
         app:layout_constraintTop_toBottomOf="@id/fg_user_button_change_user_data" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/fg_user_button_logoff"
+        android:id="@+id/fg_main_button_logoff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="36dp"
-
+        android:layout_marginBottom="80dp"
+        android:elevation="5dp"
+        android:visibility="visible"
         android:backgroundTint="@color/white"
         android:text="Sair"
 
@@ -134,5 +134,77 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+    <!--Bottom navigation-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fg_user_bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+
+        android:background="@drawable/bc_bottom_navigation"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--Home button-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/fg_user_icon_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center"
+
+            android:paddingVertical="10dp"
+            android:layout_marginStart="60dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fg_user_icon_user">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_off"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/black_plus_2"
+                android:textSize="12sp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <!--User button-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/fg_user_icon_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:layout_marginEnd="60dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fg_user_icon_home">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_user_on"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/blue_0"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

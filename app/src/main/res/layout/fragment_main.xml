@@ -32,4 +32,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fg_main_button_logoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="80dp"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/white"
+        android:text="Sair"
+
+        android:textAllCaps="false"
+        android:textColor="@color/blue_0"
+        android:textSize="15sp"
+
+        android:textStyle="bold"
+        app:icon="@drawable/ic_logoff"
+        app:iconTint="@color/blue_0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

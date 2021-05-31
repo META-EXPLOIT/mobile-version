@@ -6,25 +6,234 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
+        android:id="@+id/updateEnterpriseFragment"
+        android:name="br.com.metaexploit.diversight.ui.UpdateEnterpriseFragment"
+        android:label="fragment_update_enterprise"
+        tools:layout="@layout/fragment_update_enterprise" />
+    <fragment
+        android:id="@+id/updateUserFragment"
+        android:name="br.com.metaexploit.diversight.ui.UpdateUserFragment"
+        android:label="fragment_update_user"
+        tools:layout="@layout/fragment_update_user" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.metaexploit.diversight.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_surveyFragment"
+            app:destination="@id/surveyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_emotionalFragment"
+            app:destination="@id/emotionalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emotionalFragment"
+        android:name="br.com.metaexploit.diversight.ui.EmotionalFragment"
+        android:label="fragment_emotional"
+        tools:layout="@layout/fragment_emotional">
+        <argument
+            android:name="type"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="br.com.metaexploit.diversight.ui.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_updateEnterpriseFragment"
+            app:destination="@id/updateEnterpriseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="br.com.metaexploit.diversight.ui.SurveyFragment"
+        android:label="fragment_survey"
+        tools:layout="@layout/fragment_survey" >
+        <argument
+            android:name="pergunta"
+            app:argType="br.com.metaexploit.diversight.data.ItemPesquisa" />
+    </fragment>
+    <fragment
         android:id="@+id/loginFragment"
         android:name="br.com.metaexploit.diversight.ui.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_loginFragment_to_singUpFragment"
-            app:destination="@id/singUpFragment" />
+            android:id="@+id/action_loginFragment_to_singUpPart1Fragment"
+            app:destination="@id/singUpPart1Fragment" />
         <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/singUpFragment"
-        android:name="br.com.metaexploit.diversight.ui.SingUpFragment"
-        android:label="fragment_sing_up"
-        tools:layout="@layout/fragment_sing_up" >
+        android:id="@+id/singUpPart3Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart3Fragment"
+        android:label="fragment_sing_up_part3"
+        tools:layout="@layout/fragment_sing_up_part3">
         <action
-            android:id="@+id/action_singUpFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_singUpPart3Fragment_to_singUpPart4Fragment"
+            app:destination="@id/singUpPart4Fragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="skin"
+            app:argType="string" />
+        <argument
+            android:name="sex"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="pcd"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_visual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_fisical"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_hearing"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_intellectual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_psychosocial"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_readapted"
+            app:argType="boolean" />
+        <argument
+            android:name="birthday"
+            app:argType="string" />
+        <argument
+            android:name="enterprise"
+            app:argType="string" />
+        <argument
+            android:name="occupation"
+            app:argType="string" />
+        <argument
+            android:name="office"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpPart2Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart2Fragment"
+        android:label="fragment_sing_up_part2"
+        tools:layout="@layout/fragment_sing_up_part2">
+        <action
+            android:id="@+id/action_singUpPart2Fragment_to_singUpPart3Fragment"
+            app:destination="@id/singUpPart3Fragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="skin"
+            app:argType="string" />
+        <argument
+            android:name="sex"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="pcd"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_visual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_fisical"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_hearing"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_intellectual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_psychosocial"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_readapted"
+            app:argType="boolean" />
+        <argument
+            android:name="birthday"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpPart4Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart4Fragment"
+        android:label="fragment_sing_up_part4"
+        tools:layout="@layout/fragment_sing_up_part4">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="skin"
+            app:argType="string" />
+        <argument
+            android:name="sex"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+        <argument
+            android:name="pcd"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_visual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_fisical"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_hearing"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_intellectual"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_psychosocial"
+            app:argType="boolean" />
+        <argument
+            android:name="pcd_readapted"
+            app:argType="boolean" />
+        <argument
+            android:name="birthday"
+            app:argType="string" />
+        <argument
+            android:name="enterprise"
+            app:argType="string" />
+        <argument
+            android:name="occupation"
+            app:argType="string" />
+        <argument
+            android:name="office"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpPart1Fragment"
+        android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart1Fragment"
+        android:label="fragment_sing_up_part1"
+        tools:layout="@layout/fragment_sing_up_part1">
+        <action
+            android:id="@+id/action_singUpPart1Fragment_to_singUpPart2Fragment"
+            app:destination="@id/singUpPart2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -38,6 +247,18 @@
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="br.com.metaexploit.diversight.ui.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

@@ -22,11 +22,15 @@
         <action
             android:id="@+id/action_singUpPart2Fragment_to_singUpPart3Fragment"
             app:destination="@id/singUpPart3Fragment" />
+        <argument
+            android:name="nome"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/singUpPart3Fragment"
         android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart3Fragment"
-        android:label="fragment_sing_up_part3">
+        android:label="fragment_sing_up_part3"
+        tools:layout="@layout/fragment_sing_up_part3" >
         <action
             android:id="@+id/action_singUpPart3Fragment_to_singUpPart4Fragment"
             app:destination="@id/singUpPart4Fragment" />
@@ -34,5 +38,6 @@
     <fragment
         android:id="@+id/singUpPart4Fragment"
         android:name="br.com.metaexploit.diversight.ui.singup.SingUpPart4Fragment"
-        android:label="fragment_sing_up_part4" />
+        android:label="fragment_sing_up_part4"
+        tools:layout="@layout/fragment_sing_up_part4" />
 </navigation>

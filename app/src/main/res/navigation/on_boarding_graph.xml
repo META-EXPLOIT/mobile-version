@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/on_boarding_graph"
+    app:startDestination="@id/onBoardingPart1Fragment">
+    <fragment
+        android:id="@+id/onBoardingPart1Fragment"
+        android:name="br.com.metaexploit.diversight.ui.onboarding.OnBoardingPart1Fragment"
+        android:label="fragment_on_boarding_part1"
+        tools:layout="@layout/fragment_on_boarding_part1">
+        <action
+            android:id="@+id/action_onBoardingPart1Fragment_to_onBoardingPart2Fragment"
+            app:destination="@id/onBoardingPart2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingPart2Fragment"
+        android:name="br.com.metaexploit.diversight.ui.onboarding.OnBoardingPart2Fragment"
+        android:label="fragment_on_boarding_part2"
+        tools:layout="@layout/fragment_on_boarding_part2" >
+        <action
+            android:id="@+id/action_onBoardingPart2Fragment_to_onBoardingPart3Fragment"
+            app:destination="@id/onBoardingPart3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingPart3Fragment"
+        android:name="br.com.metaexploit.diversight.ui.onboarding.OnBoardingPart3Fragment"
+        android:label="fragment_on_boarding_part3"
+        tools:layout="@layout/fragment_on_boarding_part3" />
+</navigation>

@@ -81,54 +81,54 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="24dp"
-            android:visibility="gone"
-
             android:layout_marginTop="120dp"
-            android:paddingTop="30dp"
+
             android:clipToPadding="false"
+            android:paddingTop="30dp"
+            android:visibility="visible"
 
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
+            app:layout_constraintBottom_toTopOf="@id/fg_survey_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fg_survey_button"
-            tools:listitem="@layout/item_question"/>
+            tools:listitem="@layout/item_question" />
         <!--Complete image-->
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fg_survey_icon_complete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:src="@drawable/ic_emotional"
-            android:visibility="visible"
-
-            android:layout_marginTop="70dp"
             android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="70dp"
 
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_background_top"
-            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_emotional"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toTopOf="@id/fg_survey_label_complete"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fg_survey_label_complete"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_background_top" />
         <!--Complete text-->
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_survey_label_complete"
             android:layout_width="0dp"
-            android:visibility="visible"
             android:layout_height="wrap_content"
-            android:text="Sua pesquisa foi enviada com sucesso"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#353535"
-            android:gravity="center"
-
             android:layout_marginTop="24dp"
             android:layout_marginBottom="78dp"
+            android:gravity="center"
+            android:text="Sua pesquisa foi enviada com sucesso"
+            android:textColor="#353535"
+            android:textSize="16sp"
 
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_icon_complete"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:visibility="invisible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_icon_complete" />
         <!--Send/Home button-->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/fg_survey_button"

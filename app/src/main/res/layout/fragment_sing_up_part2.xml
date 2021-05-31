@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,181 +7,224 @@
     android:orientation="vertical"
     tools:context=".ui.singup.SingUpPart2Fragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_sing_up_2_button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_back_sing_up"
+        android:visibility="visible"
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_2_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="24dp"
-            android:text="Agora"
-            android:textColor="#1C1C1C"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="24dp"
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_2_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20.8dp"
-            android:paddingHorizontal="3.2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-            android:layout_marginTop="8dp"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fg_sing_up_2_progressbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_progressbar_2"
 
-            android:textColor="#434343"
-            android:lineHeight="24dp"
-            android:text="@string/fg_sing_up_description2"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_title" />
+        app:layout_constraintStart_toEndOf="@id/fg_sing_up_2_button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fg_sing_up_2_button_back"
+        app:layout_constraintBottom_toBottomOf="@id/fg_sing_up_2_button_back"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_2_label_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_sing_up_2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Agora"
+        android:textColor="#1C1C1C"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_button_back" />
 
-            android:textColor="#212529"
-            android:layout_marginTop="20dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_sing_up_2_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20.8dp"
+        android:layout_marginTop="8dp"
 
-            android:text="Empresa"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_description" />
+        android:lineHeight="24dp"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fg_sing_up_2_edt_enterprise"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
+        android:paddingHorizontal="3.2dp"
+        android:text="@string/fg_sing_up_description2"
+        android:textColor="#434343"
 
-            android:layout_height="44dp"
-            app:endIconMode="dropdown_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_title" />
 
-            app:boxStrokeColor="#1362FF"
-            app:boxStrokeWidth="1dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_sing_up_2_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:text="Empresa"
 
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="24dp"
+        android:textColor="#212529"
+        app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_description" />
 
-            app:boxCornerRadiusBottomStart="16dp"
-            app:boxCornerRadiusBottomEnd="16dp"
-            app:boxCornerRadiusTopEnd="16dp"
-            app:boxCornerRadiusTopStart="16dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fg_sing_up_2_edt_enterprise"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_name">
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="24dp"
 
-            <AutoCompleteTextView
-                android:id="@+id/fg_sing_up_2_edt_enterprise_autocomplete"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/select"
-                android:textColorHint="#2B2B2B"
-                android:inputType="none"
-                android:paddingHorizontal="16dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        app:boxCornerRadiusBottomEnd="16dp"
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_2_label_occupation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomStart="16dp"
 
-            android:textColor="#212529"
-            android:layout_marginTop="20dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
 
-            android:text="Área de atuação"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_edt_enterprise" />
+        app:boxStrokeColor="#1362FF"
+        app:boxStrokeWidth="1dp"
+        app:endIconMode="dropdown_menu"
+        app:hintEnabled="false"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fg_sing_up_2_edt_occupation"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_name">
 
-            android:layout_height="44dp"
-            app:endIconMode="dropdown_menu"
+        <AutoCompleteTextView
+            android:id="@+id/fg_sing_up_2_edt_enterprise_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/select"
+            android:inputType="none"
+            android:paddingHorizontal="16dp"
+            android:textColorHint="#2B2B2B" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            app:boxStrokeColor="#1362FF"
-            app:boxStrokeWidth="1dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_sing_up_2_label_occupation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:text="Área de atuação"
 
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="24dp"
+        android:textColor="#212529"
+        app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_edt_enterprise" />
 
-            app:boxCornerRadiusBottomStart="16dp"
-            app:boxCornerRadiusBottomEnd="16dp"
-            app:boxCornerRadiusTopEnd="16dp"
-            app:boxCornerRadiusTopStart="16dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fg_sing_up_2_edt_occupation"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_occupation">
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="24dp"
 
-            <AutoCompleteTextView
-                android:id="@+id/fg_sing_up_2_edt_occupation_autocomplete"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/select"
-                android:textColorHint="#2B2B2B"
-                android:inputType="none"
-                android:paddingHorizontal="16dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        app:boxCornerRadiusBottomEnd="16dp"
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_2_label_office"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomStart="16dp"
 
-            android:textColor="#212529"
-            android:layout_marginTop="20dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
 
-            android:text="Cargo"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_edt_occupation" />
+        app:boxStrokeColor="#1362FF"
+        app:boxStrokeWidth="1dp"
+        app:endIconMode="dropdown_menu"
+        app:hintEnabled="false"
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fg_sing_up_2_edt_office"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_occupation">
 
-            android:layout_height="44dp"
-            app:endIconMode="dropdown_menu"
+        <AutoCompleteTextView
+            android:id="@+id/fg_sing_up_2_edt_occupation_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/select"
+            android:inputType="none"
+            android:paddingHorizontal="16dp"
+            android:textColorHint="#2B2B2B" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            app:boxStrokeColor="#1362FF"
-            app:boxStrokeWidth="1dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_sing_up_2_label_office"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-            app:hintEnabled="false"
+        android:layout_marginTop="20dp"
+        android:text="Cargo"
 
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="24dp"
+        android:textColor="#212529"
+        app:layout_constraintStart_toStartOf="@id/fg_sing_up_2_description"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_edt_occupation" />
 
-            app:boxCornerRadiusBottomStart="16dp"
-            app:boxCornerRadiusBottomEnd="16dp"
-            app:boxCornerRadiusTopEnd="16dp"
-            app:boxCornerRadiusTopStart="16dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fg_sing_up_2_edt_office"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_office">
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="24dp"
 
-            <AutoCompleteTextView
-                android:id="@+id/fg_sing_up_2_edt_office_autocomplete"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/select"
-                android:textColorHint="#2B2B2B"
-                android:inputType="none"
-                android:paddingHorizontal="16dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        app:boxCornerRadiusBottomEnd="16dp"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:boxCornerRadiusBottomStart="16dp"
 
-</ScrollView>
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+
+        app:boxStrokeColor="#1362FF"
+        app:boxStrokeWidth="1dp"
+        app:endIconMode="dropdown_menu"
+        app:hintEnabled="false"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_sing_up_2_label_office">
+
+        <AutoCompleteTextView
+            android:id="@+id/fg_sing_up_2_edt_office_autocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/select"
+            android:inputType="none"
+            android:paddingHorizontal="16dp"
+            android:textColorHint="#2B2B2B" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fg_sing_up_2_btn_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="Próximo"
+
+        android:backgroundTint="#1362FF"
+
+        app:cornerRadius="12dp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:padding="10dp"
+
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="35dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

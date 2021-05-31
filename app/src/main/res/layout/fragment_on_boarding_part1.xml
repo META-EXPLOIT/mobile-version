@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.onboarding.OnBoardingPart1Fragment">
+
+   <androidx.appcompat.widget.AppCompatImageView
+       android:id="@+id/fg_on_boarding_part_1_image"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/ic_on_boarding_image_1"
+
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/fg_on_boarding_part_1_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_on_boarding_part_1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisas Diárias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black_text"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_on_boarding_part_1_image"
+        app:layout_constraintBottom_toTopOf="@id/fg_on_boarding_part_1_description" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fg_on_boarding_part_1_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Responda pesquisas referente ao seu humor diário de forma simples e rápida."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/black_text"
+
+        android:layout_margin="24dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_on_boarding_part_1_title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
