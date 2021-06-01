@@ -6,173 +6,414 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeFragment">
 
-    <!--Background top-->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_home_background_top"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bc_home"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-    <!--Title-->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_home_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:text="Pesquisas"
-        android:textColor="#F8F8F8"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        android:layout_marginTop="38dp"
-        android:layout_marginStart="24dp"
+            <!--Background top-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fg_home_background_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bc_home"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <!--Subtitle-->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_home_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:text="Disponíveis"
-        android:textColor="#F8F8F8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Title-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:elevation="1dp"
+                android:text="Pesquisas"
+                android:textColor="#F8F8F8"
 
-        android:layout_marginTop="67dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/fg_home_title" />
-    <!--Smile icon-->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        android:background="@drawable/ic_smile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Subtitle-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="67dp"
+                android:elevation="1dp"
+                android:text="Disponíveis"
+                android:textColor="#F8F8F8"
+                android:textSize="28sp"
 
-        android:layout_marginEnd="24dp"
+                android:textStyle="bold"
 
-        app:layout_constraintTop_toTopOf="@id/fg_home_title"
-        app:layout_constraintBottom_toBottomOf="@id/fg_home_subtitle"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <!--Menu filter-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fg_home_recyclerview_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:foregroundGravity="center"
+                app:layout_constraintStart_toStartOf="@id/fg_home_title"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Smile icon-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_smile"
 
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:elevation="1dp"
 
-        tools:listitem="@layout/item_home_menu"
+                app:layout_constraintBottom_toBottomOf="@id/fg_home_subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fg_home_title" />
+            <!--Menu filter-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_filter_daily"
+                android:layout_width="wrap_content"
+                android:minWidth="88dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="60dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="11dp"
+                android:paddingStart="0dp"
+                android:background="@drawable/bc_item_menu_off"
+                android:layout_marginHorizontal="4dp"
 
-        android:layout_marginTop="115dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/home_filter_weekly"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_subtitle">
 
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <!--Survey list-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fg_home_recyclerview_surveys"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="visible"
-        android:elevation="3dp"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_menu_daily_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_watch_off"
 
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginVertical="7dp"
+                    android:layout_marginStart="13dp"
 
-        android:layout_marginTop="20dp"
-        android:paddingBottom="200dp"
-        android:clipToPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
-        app:layout_constraintTop_toBottomOf="@id/fg_home_background_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_menu_daily_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_minus_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
 
-        tools:listitem="@layout/item_home_survey" />
-    <!--No survey image-->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_home_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="9dp"
 
-        android:src="@drawable/ic_main"
-        android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/item_menu_daily_image"
 
-        android:layout_marginTop="70dp"
-        android:layout_marginHorizontal="66dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Diárias"/>
 
-        app:layout_constraintTop_toBottomOf="@id/fg_home_background_top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"/>
-    <!--No survey text-->
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_home_label_nosearch"
-        android:layout_width="0dp"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:text="Nenhuma pesquisa disponível no momento!"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#353535"
-        android:gravity="center"
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_filter_weekly"
+                android:layout_width="wrap_content"
+                android:minWidth="88dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="11dp"
+                android:paddingStart="0dp"
+                android:background="@drawable/bc_item_menu_off"
+                android:layout_marginHorizontal="4dp"
 
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="78dp"
+                app:layout_constraintStart_toEndOf="@id/home_filter_daily"
+                app:layout_constraintEnd_toStartOf="@id/home_filter_nps"
+                app:layout_constraintTop_toTopOf="@id/home_filter_daily">
 
-        app:layout_constraintTop_toBottomOf="@id/fg_home_icon"
-        app:layout_constraintStart_toStartOf="@id/fg_home_icon"
-        app:layout_constraintEnd_toEndOf="@id/fg_home_icon"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_menu_weekly_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_calendar_off"
+
+                    android:layout_marginVertical="7dp"
+                    android:layout_marginStart="13dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_menu_weekly_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_minus_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="9dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/item_menu_weekly_image"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Semanais"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_filter_nps"
+                android:layout_width="wrap_content"
+                android:minWidth="88dp"
+                android:layout_marginEnd="60dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="11dp"
+                android:paddingStart="0dp"
+                android:background="@drawable/bc_item_menu_off"
+                android:layout_marginHorizontal="4dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/home_filter_weekly"
+                app:layout_constraintTop_toTopOf="@id/home_filter_weekly">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_menu_nps_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nps_off"
+
+                    android:layout_marginVertical="7dp"
+                    android:layout_marginStart="13dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_menu_nps_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_minus_1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginStart="9dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/item_menu_nps_image"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="NPS"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Daily survey-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_surveys_daily_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:textColor="#2B2B2B"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_background_top"
+                android:text="Pesquisas diárias" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fg_home_surveys_daily_rc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_daily_title"
+                tools:listitem="@layout/item_home_survey_item" />
+            <!--Weekly survey-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_surveys_weekly_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:textColor="#2B2B2B"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_daily_rc"
+                android:text="Pesquisas semanais" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fg_home_surveys_weekly_rc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_weekly_title"
+                tools:listitem="@layout/item_home_survey_item" />
+            <!--NPS survey-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_surveys_nps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:textColor="#2B2B2B"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_weekly_rc"
+                android:text="Pesquisas Trimestrais NPS" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fg_home_surveys_nps_rc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_nps_title"
+                tools:listitem="@layout/item_home_survey_item" />
+            <!--Adm/Dem survey-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_surveys_adm_dem_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:textColor="#2B2B2B"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_nps_rc"
+                android:text="Pesquisa Demissional / Admissional" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fg_home_surveys_adm_dem_rc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="130dp"
+                android:clipToPadding="false"
+
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_surveys_adm_dem_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/item_home_survey_item" />
+            <!--No survey image-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fg_home_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginHorizontal="66dp"
+                android:layout_marginTop="70dp"
+
+                android:src="@drawable/ic_main"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toTopOf="@id/fg_home_label_nosearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_background_top" />
+            <!--No survey text-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fg_home_label_nosearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="78dp"
+                android:gravity="center"
+                android:text="Nenhuma pesquisa disponível no momento!"
+                android:textColor="#353535"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                android:visibility="gone"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/fg_home_icon"
+                app:layout_constraintStart_toStartOf="@id/fg_home_icon"
+                app:layout_constraintTop_toBottomOf="@id/fg_home_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
     <!--Bottom navigation-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fg_home_bottom_navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:elevation="5dp"
-
         android:background="@drawable/bc_bottom_navigation"
 
-        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="5dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
         <!--Home button-->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/fg_home_icon_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:orientation="vertical"
+            android:layout_marginStart="60dp"
             android:gravity="center"
 
+            android:orientation="vertical"
             android:paddingVertical="10dp"
-            android:layout_marginStart="60dp"
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/fg_home_icon_user">
+            app:layout_constraintEnd_toStartOf="@id/fg_home_icon_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_home_on"/>
+                android:src="@drawable/ic_home_on" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Home"
-                android:textStyle="bold"
                 android:textColor="@color/blue_0"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </androidx.appcompat.widget.LinearLayoutCompat>
         <!--User button-->
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -180,28 +421,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:orientation="vertical"
+            android:layout_marginEnd="60dp"
             android:gravity="center"
 
+            android:orientation="vertical"
             android:paddingVertical="10dp"
-            android:layout_marginEnd="60dp"
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/fg_home_icon_home">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fg_home_icon_home"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_user_off"/>
+                android:src="@drawable/ic_user_off" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Perfil"
-                android:textSize="12sp"
-                android:textColor="@color/black_plus_2"/>
+                android:textColor="@color/black_plus_2"
+                android:textSize="12sp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

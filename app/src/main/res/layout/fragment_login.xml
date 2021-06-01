@@ -61,7 +61,7 @@
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
             android:paddingHorizontal="16dp"
-            android:text="tavieto@ioasys.com"
+            android:text="tavieto.mobile@ioasys.com"
             android:textColorHint="@color/black_text"
             android:textCursorDrawable="?attr/boxStrokeColor"
             android:textSize="18sp" />
@@ -111,7 +111,7 @@
             android:layout_height="match_parent"
             android:inputType="textPassword"
             android:paddingHorizontal="16dp"
-            android:text="senha"
+            android:text="admin"
             android:textColorHint="@color/black_text"
             android:textCursorDrawable="?attr/boxStrokeColor"
             android:textSize="18sp" />

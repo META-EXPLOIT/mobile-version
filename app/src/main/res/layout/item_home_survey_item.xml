@@ -10,7 +10,7 @@
     android:layout_marginHorizontal="4dp">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/fg_main_recyclerview_surveys_items_image_bc"
+        android:id="@+id/itemForm_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="34dp"
@@ -23,7 +23,7 @@
         tools:background="@drawable/ic_survey_daily" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_main_recyclerview_surveys_items_text_status"
+        android:id="@+id/itemForm_statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
@@ -33,12 +33,12 @@
         android:layout_marginHorizontal="8dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fg_main_recyclerview_surveys_items_image_bc"
+        app:layout_constraintTop_toBottomOf="@id/itemForm_image"
 
         tools:text="Disponível" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_main_recyclerview_surveys_items_text_date"
+        android:id="@+id/itemForm_dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
@@ -50,13 +50,13 @@
         android:layout_marginHorizontal="8dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fg_main_recyclerview_surveys_items_text_status"
+        app:layout_constraintTop_toBottomOf="@id/itemForm_statusText"
         app:layout_constraintBottom_toBottomOf="parent"
 
         tools:text="03/05" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fg_main_recyclerview_surveys_items_text_title"
+        android:id="@+id/itemForm_typeText"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_marginHorizontal="8dp"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/fg_main_recyclerview_surveys_items_text_date"
+        app:layout_constraintTop_toTopOf="@id/itemForm_dateText"
 
         tools:text="Diária" />
 

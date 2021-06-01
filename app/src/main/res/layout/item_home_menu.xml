@@ -6,14 +6,14 @@
     android:layout_height="wrap_content"
     android:paddingEnd="11dp"
     android:paddingStart="0dp"
-    android:background="@drawable/bc_item_menu"
+    android:background="@drawable/bc_item_menu_off"
     android:layout_marginHorizontal="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/item_menu_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         tools:src="@drawable/ic_calendar_off"
 
         android:layout_marginVertical="7dp"
@@ -27,7 +27,7 @@
         android:id="@+id/item_menu_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#0A46BD"
+        android:textColor="@color/blue_minus_1"
         android:textSize="12sp"
         android:textStyle="bold"
 

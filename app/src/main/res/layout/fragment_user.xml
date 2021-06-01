@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/user_name"
+        android:id="@+id/fg_user_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="53dp"
         android:elevation="1dp"
-        android:text="Carlos"
+        tools:text="Carlos"
         android:textColor="#F8F8F8"
 
         android:textSize="28sp"

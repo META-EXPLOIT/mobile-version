@@ -8,7 +8,7 @@
     <color name="bc_button_login">#FDBB10</color>
     <color name="transparent_white">#80FFFFFF</color>
     <color name="transparent_black">#80000000</color>
-    <color name="text_menu_item_on_focus">#F8F8F8</color>
+    <color name="grey_text">#F8F8F8</color>
     <color name="loading">#80ADC9FF</color>
 
     <color name="blue_minus_2">#0C2D6E</color>

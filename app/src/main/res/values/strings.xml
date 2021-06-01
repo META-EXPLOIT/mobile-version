@@ -20,6 +20,22 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="key_boarding_visible">onboarding</string>
+    <string name="key_user_name">user_name</string>
+    <string name="key_user_skin">user_skin</string>
+    <string name="key_user_sex">user_sex</string>
+    <string name="key_user_gender">user_gender</string>
+    <string name="key_user_pcd">user_pcd</string>
+    <string name="key_user_pcd_visual">user_pcd_visual</string>
+    <string name="key_user_pcd_fisical">user_pcd_fisical</string>
+    <string name="key_user_pcd_hearing">user_pcd_hearing</string>
+    <string name="key_user_pcd_intellectual">user_pcd_intellectual</string>
+    <string name="key_user_pcd_psychosocial">user_pcd_psychosocial</string>
+    <string name="key_user_pcd_readapted">user_pcd_readapted</string>
+    <string name="key_user_birthday">user_birthday</string>
+    <string name="key_user_enterprise">user_enterprise</string>
+    <string name="key_user_occupation">user_occupation</string>
+    <string name="key_user_office">user_office</string>
+    <string name="key_user_email">user_email</string>
 </resources>

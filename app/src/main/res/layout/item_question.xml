@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="28dp"
-    android:paddingVertical="15dp"
+    android:padding="15dp"
     android:background="@drawable/bc_item_survey"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -55,11 +55,24 @@
         app:layout_constraintStart_toStartOf="@id/item_question_enunciated"
         app:layout_constraintTop_toBottomOf="@id/item_question_enunciated" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/item_question_recyclerview"
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/item_question_recyclerview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+
+<!--        android:layout_marginTop="12dp"-->
+<!--        tools:listitem="@layout/item_question_opt"-->
+
+<!--        app:layout_constraintStart_toStartOf="@id/item_question_divider"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/item_question_divider"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/item_question_divider" />-->
+
+    <RadioGroup
+        android:id="@+id/item_question_radio_group"
+        style="@style/Theme.AppCamp.Radio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
         android:layout_marginTop="12dp"
         tools:listitem="@layout/item_question_opt"
@@ -67,6 +80,5 @@
         app:layout_constraintStart_toStartOf="@id/item_question_divider"
         app:layout_constraintEnd_toEndOf="@id/item_question_divider"
         app:layout_constraintTop_toBottomOf="@id/item_question_divider" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

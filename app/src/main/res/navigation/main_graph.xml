@@ -56,10 +56,10 @@
         android:id="@+id/surveyFragment"
         android:name="br.com.metaexploit.diversight.ui.SurveyFragment"
         android:label="fragment_survey"
-        tools:layout="@layout/fragment_survey" >
+        tools:layout="@layout/fragment_survey">
         <argument
             android:name="pergunta"
-            app:argType="br.com.metaexploit.diversight.data.ItemPesquisa" />
+            app:argType="br.com.metaexploit.diversight.remote.Form" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -236,11 +236,6 @@
             app:destination="@id/singUpPart2Fragment" />
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="br.com.metaexploit.diversight.ui.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
-    <fragment
         android:id="@+id/splashFragment"
         android:name="br.com.metaexploit.diversight.ui.SplashFragment"
         android:label="fragment_splash"
@@ -256,7 +251,7 @@
         android:id="@+id/onBoardingFragment"
         android:name="br.com.metaexploit.diversight.ui.OnBoardingFragment"
         android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" >
+        tools:layout="@layout/fragment_on_boarding">
         <action
             android:id="@+id/action_onBoardingFragment_to_loginFragment"
             app:destination="@id/loginFragment" />

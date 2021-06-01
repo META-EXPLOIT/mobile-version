@@ -20,5 +20,11 @@
         <item name="colorPrimary">@color/white</item>
         <item name="colorOnPrimary">@color/blue_0</item>
     </style>
+
+    <style name="Theme.AppCamp.Radio">
+        <item name="android:buttonTint">@color/blue_0</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
 
