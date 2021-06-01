@@ -206,7 +206,6 @@
                     android:text="NPS"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
             <!--Daily survey-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/fg_home_surveys_daily_title"
@@ -216,6 +215,7 @@
                 android:layout_marginTop="32dp"
                 android:textColor="#2B2B2B"
                 android:textSize="16sp"
+                android:visibility="gone"
 
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -225,6 +225,7 @@
                 android:id="@+id/fg_home_surveys_daily_rc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
 
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
@@ -247,6 +248,7 @@
                 android:layout_marginTop="32dp"
                 android:textColor="#2B2B2B"
                 android:textSize="16sp"
+                android:visibility="gone"
 
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -256,6 +258,7 @@
                 android:id="@+id/fg_home_surveys_weekly_rc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
 
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
@@ -278,6 +281,7 @@
                 android:layout_marginTop="32dp"
                 android:textColor="#2B2B2B"
                 android:textSize="16sp"
+                android:visibility="gone"
 
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -287,6 +291,7 @@
                 android:id="@+id/fg_home_surveys_nps_rc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
 
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
@@ -309,6 +314,7 @@
                 android:layout_marginTop="32dp"
                 android:textColor="#2B2B2B"
                 android:textSize="16sp"
+                android:visibility="gone"
 
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -318,6 +324,7 @@
                 android:id="@+id/fg_home_surveys_adm_dem_rc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
 
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="130dp"
