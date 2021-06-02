@@ -131,7 +131,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fg_survey_icon_complete" />
-        <!--Send/Home button-->
+        <!--Send button-->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/fg_survey_button_send"
             android:layout_width="140dp"
@@ -158,4 +158,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fg_survey_label_complete" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fg_survey_button_home"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="100dp"
+
+
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="25dp"
+
+            android:backgroundTint="@color/blue_0"
+            android:text="Voltar para Home"
+            android:textAllCaps="false"
+
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_home_on"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fg_survey_label_complete" />
 </androidx.constraintlayout.widget.ConstraintLayout>

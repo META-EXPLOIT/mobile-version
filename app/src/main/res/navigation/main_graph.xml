@@ -36,9 +36,8 @@
         android:label="fragment_emotional"
         tools:layout="@layout/fragment_emotional">
         <argument
-            android:name="type"
-            android:defaultValue="0"
-            app:argType="integer" />
+            android:name="form"
+            app:argType="br.com.metaexploit.diversight.remote.Form" />
     </fragment>
     <fragment
         android:id="@+id/userFragment"
