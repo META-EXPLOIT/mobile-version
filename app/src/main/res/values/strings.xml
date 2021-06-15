@@ -21,6 +21,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+
+    <!-- Shared preferences keys-->
     <string name="key_boarding_visible">onboarding</string>
     <string name="key_user_name">user_name</string>
     <string name="key_user_skin">user_skin</string>
