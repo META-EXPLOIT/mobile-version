@@ -38,4 +38,6 @@
     <string name="key_user_occupation">user_occupation</string>
     <string name="key_user_office">user_office</string>
     <string name="key_user_email">user_email</string>
+    <string name="final_board">Vamos lá!</string>
+    <string name="init_board">Próximo!</string>
 </resources>

@@ -248,7 +248,7 @@
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="br.com.metaexploit.diversight.ui.OnBoardingFragment"
+        android:name="br.com.metaexploit.diversight.ui.OnBoardFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding">
         <action
