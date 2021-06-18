@@ -11,8 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--Back button-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_sing_up_1_button_back"
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -23,9 +24,9 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-
+        <!--Progress bar-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_sing_up_1_progressbar"
+            android:id="@+id/progressbar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_progressbar_1"
@@ -33,32 +34,31 @@
             android:layout_marginEnd="24dp"
             android:layout_marginStart="8dp"
 
-            app:layout_constraintStart_toEndOf="@id/fg_sing_up_1_button_back"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fg_sing_up_1_button_back"
-            app:layout_constraintBottom_toBottomOf="@id/fg_sing_up_1_button_back"/>
-
+            app:layout_constraintTop_toTopOf="@id/btnBack"
+            app:layout_constraintBottom_toBottomOf="@id/btnBack"/>
+        <!--Title-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_title"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="24dp"
-            android:text="Olá"
+            android:text="@string/hello"
             android:textColor="#1C1C1C"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_button_back" />
-
+            app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        <!--Description-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_description"
+            android:id="@+id/description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20.8dp"
             android:layout_marginTop="8dp"
-
-            android:lineHeight="24dp"
+            android:lineSpacingMultiplier="1.25"
 
             android:paddingHorizontal="3.2dp"
             android:text="@string/fg_sing_up_description1"
@@ -66,22 +66,23 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_title" />
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
+        <!--Name-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_label_name"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
 
             android:layout_marginTop="20dp"
-            android:text="Nome"
+            android:text="@string/name"
 
             android:textColor="#212529"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_description" />
-
+            app:layout_constraintStart_toStartOf="@id/description"
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/description" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fg_sing_up_1_edt_email"
+            android:id="@+id/edtName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="44dp"
@@ -94,17 +95,19 @@
 
             app:boxCornerRadiusBottomStart="16dp"
 
+            android:labelFor="@id/edtNameAuto"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusTopStart="16dp"
             app:boxStrokeColor="#1362FF"
             app:boxStrokeWidth="1dp"
 
             app:hintEnabled="false"
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_description"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_label_name">
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintStart_toStartOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/txtName">
 
             <AutoCompleteTextView
+                android:id="@+id/edtNameAuto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
@@ -113,21 +116,21 @@
                 android:textCursorDrawable="?attr/boxStrokeColor"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!--Skin-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_label_color"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtSkin"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            android:text="Cor e/ou raça"
+            android:text="@string/skin"
             android:textColor="#212529"
 
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_edt_email" />
-
+            app:layout_constraintStart_toStartOf="@id/edtName"
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/edtName" />
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fg_sing_up_1_edt_enterprise"
+            android:id="@+id/edtSkin"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
 
@@ -147,9 +150,9 @@
             app:endIconTint="#1362FF"
             app:hintEnabled="false"
 
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_label_color">
+            app:layout_constraintEnd_toEndOf="@id/edtName"
+            app:layout_constraintStart_toStartOf="@id/edtName"
+            app:layout_constraintTop_toBottomOf="@id/txtSkin">
 
             <AutoCompleteTextView
                 android:id="@+id/fg_sing_up_1_edt_color_autocomplete"
@@ -163,15 +166,16 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_sing_up_1_label_sex"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            android:text="Gênero"
+            android:text="@string/sex"
             android:textColor="#212529"
 
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_enterprise"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_edt_enterprise" />
+            app:layout_constraintStart_toStartOf="@id/edtSkin"
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/edtSkin" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fg_sing_up_1_edt_sex"
@@ -194,8 +198,8 @@
             app:endIconTint="#1362FF"
             app:hintEnabled="false"
 
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_email"
+            app:layout_constraintEnd_toEndOf="@id/edtName"
+            app:layout_constraintStart_toStartOf="@id/edtName"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_label_sex">
 
             <AutoCompleteTextView
@@ -210,14 +214,15 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_sing_up_1_label_gender"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            android:text="Orientação Sexual"
+            android:text="@string/gender"
             android:textColor="#212529"
 
             app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_sex"
+            app:layout_constraintEnd_toEndOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_edt_sex" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -241,8 +246,8 @@
             app:endIconTint="#1362FF"
             app:hintEnabled="false"
 
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_email"
+            app:layout_constraintEnd_toEndOf="@id/edtName"
+            app:layout_constraintStart_toStartOf="@id/edtName"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_label_gender">
 
             <AutoCompleteTextView
@@ -257,14 +262,15 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_sing_up_1_label_pcd"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            android:text="Pessoa com deficiência (PCD)"
+            android:text="@string/pcd"
             android:textColor="#212529"
 
             app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_gender"
+            app:layout_constraintEnd_toEndOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_edt_gender" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -288,8 +294,8 @@
             app:endIconTint="#1362FF"
             app:hintEnabled="false"
 
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_edt_email"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_email"
+            app:layout_constraintEnd_toEndOf="@id/edtName"
+            app:layout_constraintStart_toStartOf="@id/edtName"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_label_pcd">
 
             <AutoCompleteTextView
@@ -367,14 +373,15 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_sing_up_1_label_birthday"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
 
-            android:text="Data de nascimento"
+            android:text="@string/birthday"
             android:textColor="#212529"
 
             app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_pcd"
+            app:layout_constraintEnd_toEndOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_pcd_opt" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -396,7 +403,7 @@
             app:hintEnabled="false"
 
 
-            android:hint="AAAA-MM-DD"
+
 
             app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_edt_pcd"
             app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_edt_pcd"
@@ -406,7 +413,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="date"
-
+                android:hint="@string/birthday_model"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="#2B2B2B"
                 android:textCursorDrawable="?attr/boxStrokeColor"

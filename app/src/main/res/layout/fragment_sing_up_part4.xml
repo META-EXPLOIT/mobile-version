@@ -35,7 +35,7 @@
             app:layout_constraintBottom_toBottomOf="@id/fg_sing_up_4_button_back"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_title"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up_4_button_back" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_sing_up_1_description"
+            android:id="@+id/description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20.8dp"
@@ -62,7 +62,7 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_title" />
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/fg_update_user_label_name"
@@ -73,8 +73,8 @@
             android:layout_marginTop="20dp"
 
             android:text="Senha"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
-            app:layout_constraintTop_toBottomOf="@id/fg_sing_up_1_description" />
+            app:layout_constraintStart_toStartOf="@id/description"
+            app:layout_constraintTop_toBottomOf="@id/description" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/fg_sing_up4_edt_password"
@@ -92,8 +92,8 @@
             app:hintEnabled="false"
 
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_description"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintStart_toStartOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/fg_update_user_label_name"
 
             app:passwordToggleEnabled="true"
@@ -137,8 +137,8 @@
             app:hintEnabled="false"
 
             android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/fg_sing_up_1_description"
-            app:layout_constraintStart_toStartOf="@id/fg_sing_up_1_description"
+            app:layout_constraintEnd_toEndOf="@id/description"
+            app:layout_constraintStart_toStartOf="@id/description"
             app:layout_constraintTop_toBottomOf="@id/fg_sing_up4_label_password_confirm"
 
             app:passwordToggleEnabled="true"

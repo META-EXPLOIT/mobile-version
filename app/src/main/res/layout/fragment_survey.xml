@@ -8,7 +8,7 @@
 
         <!--Background top-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_survey_background_top"
+            android:id="@+id/bcTop"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/bc_home"
@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent" />
         <!--Back button-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_survey_back"
+            android:id="@+id/btnBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_back"
@@ -28,11 +28,11 @@
             android:layout_marginStart="34dp"
 
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fg_survey_title"
-            app:layout_constraintBottom_toBottomOf="@id/fg_survey_title"/>
+            app:layout_constraintTop_toTopOf="@id/title"
+            app:layout_constraintBottom_toBottomOf="@id/title"/>
         <!--Title-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_survey_title"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="38dp"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toTopOf="parent" />
         <!--Subtitle-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_survey_subtitle"
+            android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
@@ -59,12 +59,12 @@
 
             android:textStyle="bold"
 
-            app:layout_constraintStart_toStartOf="@id/fg_survey_title"
-            app:layout_constraintEnd_toEndOf="@id/fg_survey_title"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintEnd_toEndOf="@id/title"
             app:layout_constraintTop_toTopOf="parent" />
         <!--Smile icon-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_survey_smile"
+            android:id="@+id/icSmile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
@@ -72,12 +72,12 @@
 
             android:elevation="2dp"
 
-            app:layout_constraintBottom_toBottomOf="@id/fg_survey_subtitle"
+            app:layout_constraintBottom_toBottomOf="@id/subtitle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fg_survey_title" />
+            app:layout_constraintTop_toTopOf="@id/title" />
         <!--Question list-->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fg_survey_recyclerview"
+            android:id="@+id/questionList"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="24dp"
@@ -91,14 +91,14 @@
 
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
-            app:layout_constraintBottom_toTopOf="@id/fg_survey_button_send"
+            app:layout_constraintBottom_toTopOf="@id/btnSend"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item_question" />
         <!--Complete image-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_survey_icon_complete"
+            android:id="@+id/ic_complete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -108,13 +108,13 @@
             android:src="@drawable/ic_emotional"
             android:visibility="invisible"
 
-            app:layout_constraintBottom_toTopOf="@id/fg_survey_label_complete"
+            app:layout_constraintBottom_toTopOf="@id/txtComplete"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_background_top" />
+            app:layout_constraintTop_toBottomOf="@id/bcTop" />
         <!--Complete text-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_survey_label_complete"
+            android:id="@+id/txtComplete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -130,10 +130,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_icon_complete" />
+            app:layout_constraintTop_toBottomOf="@id/ic_complete" />
         <!--Send button-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/fg_survey_button_send"
+            android:id="@+id/btnSend"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
 
@@ -156,10 +156,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_label_complete" />
-
+            app:layout_constraintTop_toBottomOf="@id/txtComplete" />
+        <!--Home button-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/fg_survey_button_home"
+            android:id="@+id/btnHome"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
 
@@ -182,5 +182,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_survey_label_complete" />
+            app:layout_constraintTop_toBottomOf="@id/txtComplete" />
 </androidx.constraintlayout.widget.ConstraintLayout>

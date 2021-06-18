@@ -4,285 +4,300 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.EmotionalFragment">
+    tools:context=".ui.EmotionalFragment"
+    tools:ignore="TooManyViews">
 
     <!--Container-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <!--Background top-->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_emotional_background_top"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bc_home"
-            android:elevation="1dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <!--Back button-->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_emotional_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_back"
-            android:elevation="1dp"
-
-            android:layout_marginStart="34dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fg_emotional_title"
-            app:layout_constraintBottom_toBottomOf="@id/fg_emotional_title"/>
-        <!--Title-->
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_emotional_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
-            android:elevation="2dp"
-            android:text="Pesquisa"
-            android:textColor="#F8F8F8"
-
-            android:textSize="28sp"
-            android:textStyle="bold"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <!--Subtitle-->
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_emotional_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="67dp"
-            android:elevation="2dp"
-            android:textColor="#F8F8F8"
-            android:textSize="28sp"
-            android:textStyle="bold"
-
-            app:layout_constraintStart_toStartOf="@id/fg_emotional_title"
-            app:layout_constraintEnd_toEndOf="@id/fg_emotional_title"
-
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Humor diário" />
-        <!--Smile icon-->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/ic_smile"
-
-            android:elevation="2dp"
-
-            app:layout_constraintBottom_toBottomOf="@id/fg_emotional_subtitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fg_emotional_title" />
-        <!--Date-->
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_emotional_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="73dp"
-            android:background="@drawable/bc_counter"
-
-            android:padding="3dp"
-
-            android:textColor="@color/white"
-            android:textSize="12sp"
-
-            app:layout_constraintStart_toStartOf="@id/fg_emotional_divider"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_background_top"
-            tools:text="03/05/2021" />
-        <!--Enunciated-->
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_emotional_enunciated"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-
-            android:layout_marginHorizontal="52dp"
-
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-
-            android:textColor="#2B2B2B"
-            android:textSize="16sp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_date"
-
-            tools:text="Como você está se sentindo hoje?" />
-        <!--Horizontal line-->
-        <View
-            android:id="@+id/fg_emotional_divider"
-            android:layout_width="0dp"
-            android:layout_height="1px"
-            android:visibility="visible"
-
-            android:layout_marginHorizontal="36dp"
-            android:layout_marginTop="12dp"
-
-            android:background="#B4B4B4"
-            android:elevation="1dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_enunciated" />
-        <!--Emoticon list-->
+        <!--Header-->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/fg_emotional_emoticon_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-
-            android:layout_marginTop="34dp"
-
-            app:layout_constraintEnd_toEndOf="@id/fg_emotional_divider"
-            app:layout_constraintStart_toStartOf="@id/fg_emotional_divider"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_divider">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/fg_emotional_emoticon_very_sad"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Background top-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bcTop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                app:layout_constraintEnd_toStartOf="@id/fg_emotional_emoticon_sad"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fg_emotional_emoticon_very_sad_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_emoticon_very_sad_off" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fg_emotional_emoticon_very_sad_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Muito ruim"
-                    android:textColor="#434343"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/fg_emotional_emoticon_sad"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                app:layout_constraintEnd_toStartOf="@id/fg_emotional_emoticon_neutral"
-                app:layout_constraintStart_toEndOf="@id/fg_emotional_emoticon_very_sad"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fg_emotional_emoticon_sad_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_emoticon_sad_off" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fg_emotional_emoticon_sad_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ruim"
-                    android:textColor="#434343"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/fg_emotional_emoticon_neutral"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                app:layout_constraintEnd_toStartOf="@id/fg_emotional_emoticon_happy"
-                app:layout_constraintStart_toEndOf="@id/fg_emotional_emoticon_sad"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fg_emotional_emoticon_neutral_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_emoticon_neutral_off" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fg_emotional_emoticon_neutral_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Normal"
-                    android:textColor="#434343"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/fg_emotional_emoticon_happy"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-
-                app:layout_constraintEnd_toStartOf="@id/fg_emotional_emoticon_very_happy"
-                app:layout_constraintStart_toEndOf="@id/fg_emotional_emoticon_neutral"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fg_emotional_emoticon_happy_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_emoticon_happy_off" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fg_emotional_emoticon_happy_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bom"
-                    android:textColor="#434343"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/fg_emotional_emoticon_very_happy"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
+                android:background="@drawable/bc_home"
+                android:elevation="1dp"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/fg_emotional_emoticon_happy"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Back button-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back"
+                android:elevation="1dp"
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/fg_emotional_emoticon_very_happy_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_emoticon_very_happy_off" />
+                android:layout_marginStart="34dp"
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/fg_emotional_emoticon_very_happy_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Muito bom"
-                    android:textColor="#434343"
-                    android:textSize="12sp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title"
+                app:layout_constraintBottom_toBottomOf="@id/title"/>
+            <!--Title-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:elevation="2dp"
+                android:text="@string/search"
+                android:textColor="#F8F8F8"
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                android:textSize="28sp"
+                android:textStyle="bold"
 
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--Subtitle-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="67dp"
+                android:elevation="2dp"
+                android:textColor="#F8F8F8"
+                android:textSize="28sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintEnd_toEndOf="@id/title"
+
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Humor diário" />
+            <!--Smile icon-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/ic_smile"
+
+                android:elevation="2dp"
+
+                app:layout_constraintBottom_toBottomOf="@id/subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Emoticon container-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Date-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="73dp"
+                android:background="@drawable/bc_counter"
+
+                android:padding="3dp"
+
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                app:layout_constraintStart_toStartOf="@id/line"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="03/05/2021" />
+            <!--Enunciated-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/enunciated"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+
+                android:layout_marginHorizontal="52dp"
+
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+
+                android:textColor="#2B2B2B"
+                android:textSize="16sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date"
+
+                tools:text="Como você está se sentindo hoje?" />
+            <!--Horizontal line-->
+            <View
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:visibility="visible"
+
+                android:layout_marginHorizontal="36dp"
+                android:layout_marginTop="12dp"
+
+                android:background="#B4B4B4"
+                android:elevation="1dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/enunciated" />
+            <!--Emoticon list-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emoticon_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+
+                android:layout_marginTop="34dp"
+
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/line">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emVerySad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    app:layout_constraintEnd_toStartOf="@id/emSad"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageEmVerySad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_emoticon_very_sad_off" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleVerySad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/very_sad"
+                        android:textColor="#434343"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emSad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    app:layout_constraintEnd_toStartOf="@id/emNeutral"
+                    app:layout_constraintStart_toEndOf="@id/emVerySad"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageEmSad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_emoticon_sad_off" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleEmSad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bad"
+                        android:textColor="#434343"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emNeutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    app:layout_constraintEnd_toStartOf="@id/emHappy"
+                    app:layout_constraintStart_toEndOf="@id/emSad"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageEmNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_emoticon_neutral_off" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleEmNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal"
+                        android:textColor="#434343"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emHappy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    app:layout_constraintEnd_toStartOf="@id/emVeryHappy"
+                    app:layout_constraintStart_toEndOf="@id/emNeutral"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageEmHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_emoticon_happy_off" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleEmHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/good"
+                        android:textColor="#434343"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emVeryHappy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/emHappy"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageEmVeryHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_emoticon_very_happy_off" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleEmVeryHappy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/very_good"
+                        android:textColor="#434343"
+                        android:textSize="12sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <!--Emotional checklist-->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/fg_emotional_checklist"
@@ -294,14 +309,13 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_emoticon_container">
+            app:layout_constraintTop_toBottomOf="@id/emoticon_container">
 
             <!--Good options title-->
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="O que foi bom?" />
-
             <!--Good options container-->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/fg_emotional_good_option_container"
@@ -889,9 +903,11 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
         <!--Complete image-->
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fg_emotional_image_complete"
+            android:id="@+id/icComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -901,17 +917,17 @@
             android:layout_marginTop="70dp"
             android:layout_marginHorizontal="66dp"
 
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_background_top"
+            app:layout_constraintTop_toBottomOf="@id/bcTop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fg_emotional_text_complete"/>
+            app:layout_constraintBottom_toTopOf="@id/txtComplete"/>
         <!--Complete text-->
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fg_emotional_text_complete"
+            android:id="@+id/txtComplete"
             android:layout_width="0dp"
             android:visibility="invisible"
             android:layout_height="wrap_content"
-            android:text="Sua pesquisa foi enviada com sucesso!"
+            android:text="@string/send_search"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#353535"
@@ -920,19 +936,19 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="78dp"
 
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_image_complete"
+            app:layout_constraintTop_toBottomOf="@id/icComplete"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
         <!--Send button-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/fg_emotional_button_send"
+            android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
             android:backgroundTint="@color/blue_0"
-            android:text="Enviar"
+            android:text="@string/send"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -944,16 +960,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_text_complete" />
+            app:layout_constraintTop_toBottomOf="@id/txtComplete" />
         <!--Home button-->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/fg_emotional_button_home"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="40dp"
             android:backgroundTint="@color/blue_0"
-            android:text="Voltar para home"
+            android:text="@string/back_to_home"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -965,8 +981,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fg_emotional_text_complete" />
+            app:layout_constraintTop_toBottomOf="@id/txtComplete" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </ScrollView>

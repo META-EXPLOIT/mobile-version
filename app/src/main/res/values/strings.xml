@@ -42,4 +42,25 @@
     <string name="key_user_email">user_email</string>
     <string name="final_board">Vamos lá!</string>
     <string name="init_board">Próximo!</string>
+    <string name="search">Pesquisa</string>
+    <string name="very_sad">Muito ruim</string>
+    <string name="normal">Normal</string>
+    <string name="bad">Ruim</string>
+    <string name="good">Bom</string>
+    <string name="very_good">Muito bom</string>
+    <string name="daily_enunciated">Como você está se sentindo hoje?</string>
+    <string name="weekly_enunciated">Como foi o trabalho essa semana?</string>
+    <string name="daily_subtitle">Humor diário</string>
+    <string name="weekly_subtitle">Humor semanal</string>
+    <string name="send">Enviar</string>
+    <string name="back_to_home">Voltar para home</string>
+    <string name="send_search">Sua pesquisa foi enviada com sucesso!</string>
+    <string name="hello">Olá</string>
+    <string name="name">Nome</string>
+    <string name="skin">Cor e/ou raça</string>
+    <string name="birthday_model">AAAA-MM-DD</string>
+    <string name="birthday">Data de nascimento</string>
+    <string name="pcd">Pessoa com deficiência (PCD)</string>
+    <string name="gender">Orientação Sexual</string>
+    <string name="sex">Gênero</string>
 </resources>
