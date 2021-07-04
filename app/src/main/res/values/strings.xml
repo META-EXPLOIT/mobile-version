@@ -63,4 +63,6 @@
     <string name="pcd">Pessoa com deficiência (PCD)</string>
     <string name="gender">Orientação Sexual</string>
     <string name="sex">Gênero</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
