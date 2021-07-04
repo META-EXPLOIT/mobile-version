@@ -30,13 +30,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    apply plugin: 'kotlin-kapt'
+
     buildFeatures {
-        viewBinding true
+        dataBinding true
     }
     viewBinding {
         enabled = true
     }
-    apply plugin: 'kotlin-kapt'
+
 }
 
 dependencies {
@@ -65,6 +68,9 @@ dependencies {
 
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
+
+    // Data binding
+    kapt 'com.android.databinding:compiler:3.1.4'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
